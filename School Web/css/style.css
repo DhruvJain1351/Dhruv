@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    transition: all 300ms ease-in-out;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    cursor: pointer;
+    background-color: rgb(0, 0, 0);
+    padding: 5px 16px;
+    height: 65px;
+}
+
+.navbar .nav-list {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navbar .nav-list .logo {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar .nav-list .logo img {
+    height: 50px;
+    width: 50px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.navbar .nav-list li {
+    list-style: none;
+}
+
+.navbar .nav-list li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 200ms ease-in;
+    position: relative;
+}
+
+.navbar .nav-list li a:hover {
+    color: #6e6e6e;
+}
+
+.navbar .nav-list li a::after {
+    content: "";
+    transition: all 200ms ease-in;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    background-color: #ffffff;
+}
+
+.navbar .nav-list li a:hover::after {
+    width: 60%;
+    background-color: #6e6e6e;
+}
+
+.navbar .rightNav {
+    width: 50%;
+    text-align: right;
+}
+
+.navbar .rightNav input {
+    border-radius: 10px;
+    height: 25px;
+}
+
+.background {
+    background: rgba(0, 0, 0, 0.7) url("../image/pexels-camila-rocha-15536927.jpg");
+}
+
+/* .first-section {
+    padding: 50px 0;
+} */
+
+.first-section .box-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 50%;
+    margin: auto;
+    height: 80%;
+    padding: 50px 0;
+}
+
+.first-section .box-main .first-half {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.first-section .box-main .second-half {
+    width: 30%;
+}
+
+.first-section .box-main .second-half img {
+    height: 150px;
+    width: 150px;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin: 18px;
+}
+
+.text-big {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.text-small {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 10px 0 15px 0;
+}
+
+.buttons {
+    display: flex;
+    gap: 14px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 10px;
+    outline: none;
+    border-color: white;
+    background: none;
+    color: white;
+}
+
+.btn-sm {
+    vertical-align: middle;
+    padding: 5px 8px;
+    font-size: 10px;
+    border-radius: 3px;
+    outline: none;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+}
+
+.btn-sm:hover {
+    background-color: #ffffffc5 !important;
+}
+
+.btn-dark {
+    border: 1px solid black;
+    color: black;
+}
+
+.btn:hover {
+    background-color: #0000006b;
+    cursor: pointer;
+}
+
+.section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 80%;
+    padding: 50px 0;
+    margin: auto;
+}
+
+.left {
+    flex-direction: row-reverse;
+}
+
+.section .paras {
+    width: 60%;
+}
+
+.section .thumbnail {
+    width: 30%;
+    text-align: center;
+}
+
+.section .thumbnail .imgFluid {
+    width: 250px;
+    height: 250px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.section .sectionSubTag {
+    font-style: italic;
+    letter-spacing: 0.1rem;
+    color: #362a2ad1;
+}
+
+.sectionSubTag {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contact {
+    background-color: #ebebeb66;
+    padding: 50px 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.form {
+    max-width: 50%;
+    margin: auto;
+}
+
+.form input, .form textarea {
+    width: 100%;
+    font-size: 12px;
+    font-weight: 400;
+    border: 2px solid gray;
+    border-radius: 10px;
+    margin: 15px 0;
+    outline-color: gray;
+    padding: 3px 10px;
+    font-family: 'Ubuntu', sans-serif;
+    resize: none;
+}
+
+.form .btn {
+    border-color: gray; 
+}
+
+footer p {
+    padding: 20px 0;
+    background: #000;
+    color: #fff;
+    font-size: 18px;
+}
+
+.burger {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 28px;
+    display: none;
+}
+
+.line {
+    width: 33px;
+    background-color: #fff;
+    height: 4px;
+    margin: 3px;
+}
+
+
+
+@media screen and (max-width: 992px){
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        transition: all 1.6s ease-in-out;
+        height: 299px;
+        position: relative;
+    }
+    
+    .navbar .nav-list {
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+    }
+
+    .navbar .rightNav {
+        text-align: start;
+    }
+
+    .navbar .rightNav #search {
+        width: 100%;
+    }
+
+    .navbar .nav-list .logo {
+        display: inline-block;
+    }
+    .burger {
+        display: block;
+    }
+    .h-nav-res {
+        height: 70px;
+    }
+    .v-class-res {
+        opacity: 0;
+    }
+    .first-section .box-main {
+        flex-direction: column-reverse;
+        max-width: 80%;
+        align-items: center;
+    }
+    .section {
+        flex-direction: column;
+    }
+    .section .paras {
+        width: 80%;
+    }
+    
+    .section .thumbnail {
+        width: 80%;
+        text-align: center;
+    }
+    .navbar .nav-list .logo img {
+        height: 30px;
+        width: 30px;
+    }
+}
